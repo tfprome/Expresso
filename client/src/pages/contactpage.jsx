@@ -9,7 +9,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/contact', { message }, { withCredentials: true });
+      await axios.post('/contact', { message }, { withCredentials: true });
       setStatus('✅ Message sent successfully!');
       setIsError(false);
       setMessage('');

@@ -9,7 +9,7 @@ const AdminLogin = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:5000/adminlogin', { email, password })
+    axios.post('/adminlogin', { email, password })
       .then(result => {
         if (result.data.token) {
           document.cookie = `adminToken=${result.data.token}; path=/; max-age=3600;`;

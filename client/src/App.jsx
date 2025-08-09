@@ -41,7 +41,8 @@ useEffect(() => {
     <Route path='/service' element={<Service/>}></Route>
     <Route path='/blog' element={<Blog/>}></Route>
     <Route path='/blogshow' element={<Blogshow/>}></Route>
-    <Route path='/blog/:id' element={<Blogdetails/>}></Route>
+    <Route path='/blog/:id' element={<Blogdetails/>}>
+    </Route>
     </Route>
     
     </Routes>

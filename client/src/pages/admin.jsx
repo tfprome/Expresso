@@ -23,9 +23,10 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchDashboardData = async () => {
       try {
-        const blogRes = await axios.get('http://localhost:5000/blogshow');
-        const commentRes = await axios.get('http://localhost:5000');
-        const adminRes = await axios.get('http://localhost:5000/admin');
+        const blogRes = await axios.get('/blogshow');
+        console.log(blogRes)
+        const commentRes = await axios.get('/');
+        const adminRes = await axios.get('/admin');
      
         setBlogs(blogRes.data);
         setComments(commentRes.data.comments || commentRes.data);
@@ -52,7 +53,7 @@ const AdminDashboard = () => {
     if (!name || !email || !password) return alert("All fields are required");
   
     try {
-      const res = await axios.post('http://localhost:5000/admin', { name, email, password });
+      const res = await axios.post('/admin', { name, email, password });
       setAdmins((prev) => [...prev, res.data]);
       alert('Admin added successfully');
     } catch (error) {
@@ -67,7 +68,7 @@ const AdminDashboard = () => {
     if (!name || !email) return;
   
     try {
-      const res = await axios.put(`http://localhost:5000/admin/${admin._id}`, { name, email });
+      const res = await axios.put(`/admin/${admin._id}`, { name, email });
       setAdmins((prev) =>
         prev.map((a) => (a._id === admin._id ? res.data : a))
       );
@@ -83,7 +84,7 @@ const AdminDashboard = () => {
     if (!confirmDelete) return;
   
     try {
-      await axios.delete(`http://localhost:5000/admin/${id}`);
+      await axios.delete(`/admin/${id}`);
       setAdmins((prev) => prev.filter((a) => a._id !== id));
       alert('Admin deleted successfully');
     } catch (error) {

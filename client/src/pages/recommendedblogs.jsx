@@ -12,7 +12,7 @@ const RecommendedBlogs = () => {
   const [loading,setLoading]=useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/blogshow')
+    axios.get('/blogshow')
       .then((res) =>{
         setBlogs(res.data)
         setLoading(false);
