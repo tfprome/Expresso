@@ -22,7 +22,10 @@ const __dirname = path.dirname(__filename);
 
 app.use(cookieParser());
 app.use(express.json());
-app.use(cors({ origin: '*'}));
+app.use(cors({
+  origin: 'https://expresso99.netlify.app', // frontend URL
+  credentials: true, // only if sending cookies
+}));
 
 app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
 
