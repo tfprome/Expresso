@@ -110,7 +110,8 @@ const AdminDashboard = () => {
       key: 'image',
       render: (image) => (
         <img
-          src={`http://localhost:5000${image}`}  // DO NOT add `/uploads/` again
+          src={`https://expresso-q4wxuboqm-tfprome-651233fe.vercel.app
+${image}`}  // DO NOT add `/uploads/` again
           alt="blog"
           style={{ width: 50, height: 50, objectFit: 'cover' }}
         />

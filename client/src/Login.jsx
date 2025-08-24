@@ -14,7 +14,7 @@ const Login = () => {
 
     try {
       const result = await axios.post(
-        "https://expresso-ilwa7t092-tfprome-651233fe.vercel.app/login",
+        "/login",
         { email, password }
       );
 

@@ -96,7 +96,7 @@ const RecommendedBlogs = () => {
             >
               {blog.image && (
                 <img
-                  src={`http://localhost:5000/${blog.image.replace(/^\/+/, '')}`}
+                  src={`https://expresso-q4wxuboqm-tfprome-651233fe.vercel.app/${blog.image.replace(/^\/+/, '')}`}
                   className="card-img-top"
                   alt={blog.title}
                   style={{ height: '180px', objectFit: 'cover' }}
