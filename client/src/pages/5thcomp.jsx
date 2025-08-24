@@ -13,7 +13,7 @@ const CommentsSection = () => {
 
     const fetchComments = async () => {
       try {
-        const res = await axios.get('http://localhost:5000');
+        const res = await axios.get('http://localhost:5000/comments');
         setComments(res.data);
       } catch (error) {
         console.error('Error fetching comments:', error);
