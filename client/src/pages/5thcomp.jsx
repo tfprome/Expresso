@@ -13,7 +13,7 @@ const CommentsSection = () => {
 
     const fetchComments = async () => {
       try {
-        const res = await axios.get('https://expresso-q4wxuboqm-tfprome-651233fe.vercel.app/comments');
+        const res = await axios.get('/comments');
         setComments(res.data);
       } catch (error) {
         console.error('Error fetching comments:', error);

@@ -25,8 +25,7 @@ const Blogshow = () => {
             <div className="card blog-card h-100 shadow-sm d-flex dlex-column justify-content-between border border-dark">
               {blog.image && (
                 <img
-                  src={`https://expresso-q4wxuboqm-tfprome-651233fe.vercel.app
-${blog.image}`}
+                  src={`https://expresso-q4wxuboqm-tfprome-651233fe.vercel.app${blog.image}`}
                   className="card-img-top blog-img"
                   alt="Blog"
                 />

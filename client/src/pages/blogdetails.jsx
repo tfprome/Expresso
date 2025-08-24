@@ -26,8 +26,7 @@ const Blogdetails = () => {
     <div className="container mt-4">
       {blog.image && (
         <img
-          src={`https://expresso-q4wxuboqm-tfprome-651233fe.vercel.app
-/${blog.image.replace(/^\/+/, '')}`}
+          src={`https://expresso-q4wxuboqm-tfprome-651233fe.vercel.app/${blog.image.replace(/^\/+/, '')}`}
           alt={blog.title}
           className="img-fluid mb-4"
           style={{ maxHeight: '500px', width: '100%', objectFit: 'cover', borderRadius: '10px' }}
