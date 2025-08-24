@@ -1,6 +1,4 @@
 import React from 'react';
-
-import Navbar from '../Navbar';
 import Hero from '../Hero';
 import RecommendedBlogs from './recommendedblogs';
 import RunYourBlogEfficiently from './4thcomp';
